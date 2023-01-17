@@ -19,9 +19,8 @@ final class Team: Model, Content {
   
   init() {}
   
-  init(id: String, name: String, mentionName: String, avatarURL: String) {
-    let uuid = UUID(uuidString: id)!
-    self.id = uuid
+  init(id: UUID, name: String, mentionName: String, avatarURL: String) {
+    self.id = id
     self.name = name
     self.mentionName = mentionName
     self.avatarURL = avatarURL
